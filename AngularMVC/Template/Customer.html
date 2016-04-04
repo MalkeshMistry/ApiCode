@@ -1,0 +1,21 @@
+﻿<div class="container">
+    <h2>Customer Details</h2>
+    <div class="row">
+        <table class="table table-condensed table-hover">
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Address</th>
+                <th>Contact</th>
+                <th></th>
+            </tr>
+            <tr ng-repeat="customer in customers">
+                <td> {{customer.customerId}}</td>
+                <td> {{customer.customerName}}</td>
+                <td> {{customer.customerAddress}}</td>
+                <td> {{customer.customerContactNumner}}</td>
+                <td> <button type="submit" class="btn btn-primary btn-large" ng-click="delete(customer.customerId)">Delete</button></td>
+            </tr>
+        </table>
+    </div>
+</div>

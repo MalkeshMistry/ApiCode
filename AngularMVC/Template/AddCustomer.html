@@ -1,0 +1,26 @@
+﻿<h2>Add Customer Details</h2>
+<form name="AddCustomerform" novalidate>
+  
+   
+        <table>
+            <tr>
+                <td>Name</td>
+                <td>
+                    <input type="text" ng-model="customer.CustomerName" class="form-control" required name="CustomerName" />
+                    <span class="text-muted" ng-show="submitted && AddCustomerform.CustomerName.$error.required">Required</span>
+                </td>
+
+            </tr>
+            <tr>
+                <td>Address</td>
+                <td><input type="text" ng-model="customer.CustomerAddress" class="form-control" required /></td>
+            </tr>
+            <tr>
+                <td>Contact Number</td>
+                <td><input ng-model="customer.CustomerContactNumner" class="form-control" required type="number" /></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center"><button type="submit" class="btn btn-primary btn-large" ng-click="submitted=true; AddCustomerform.$valid && add(customer)">Submit</button></td>
+            </tr>
+        </table>
+    </form>
