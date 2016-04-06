@@ -35,7 +35,9 @@ namespace AngularMVC.Controllers
                 HttpResponseMessage response = await client.GetAsync("/WebApi/customers/");
                 if (response.IsSuccessStatusCode)
                 {
-                    var customers = await response.Content.ReadAsAsync<IList<CustomerDto>>();
+                   
+                        var customers = await response.Content.ReadAsAsync<IList<CustomerDto>>();
+                   
 
                     var jsonResult = new ContentResult
                     {
